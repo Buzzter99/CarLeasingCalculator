@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Leasing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Car Leasing Calculator</h1>
+        <form id="leasing-form">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="car-type">Car Type:</label>
+                    <select id="car-type">
+                        <option value="brand-new">Brand New</option>
+                        <option value="used">Used</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="lease-period">Lease Period (months):</label>
+                    <select id="lease-period">
+                        <option value="60">60</option>
+                        <option value="12">12</option>
+                        <option value="24">24</option>
+                        <option value="36">36</option>
+                        <option value="48">48</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group car-value-group">
+                    <label for="car-value">Car Value (€10,000 - €200,000):</label>
+                    <input type="number" id="car-value" min="10000" max="200000" value="120000">
+                    <input type="range" id="car-value-slider" min="10000" max="200000" value="120000">
+                </div>
+                <div class="input-group lease-period-group">
+                    <label for="down-payment">Down Payment (10% - 50%):</label>
+                    <input type="number" id="down-payment" min="10" max="50" value="10">
+                    <input type="range" id="down-payment-slider" min="10" max="50" value="10" step="5">
+                </div>
+            </div>
+        </form>
+        <hr>
+        <div class="leasing-details">
+            <h2>Leasing Details</h2>
+            <div class="details-row">
+                <div class="details-left">
+                    <p id="total-leasing-cost">Total Leasing Cost: €128408.32</p>
+                    <p id="down-payment-result">Down Payment: €12000.00</p>
+                </div>
+                <div class="details-separator"></div>
+                <div class="details-right">
+                    <p id="monthly-installment">Monthly Installment: €1940.14</p>
+                    <p id="interest-rate">Interest Rate: 2.99%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

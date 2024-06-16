@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.calculator-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px auto; 
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 25px; 
+}
+
+.leasing-details {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.details-row {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.details-left,
+.details-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.details-separator {
+    height: 60px;
+    width: 2px;
+    background-color: #000;
+    margin: 0 20px;
+}
+
+.details-left p,
+.details-right p {
+    margin: 5px 0;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+#car-type,
+#lease-period,
+#car-value,
+#down-payment,
+#total-leasing-cost,
+#down-payment,
+#interest-rate,
+#monthly-installment,
+#down-payment-result {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .input-row {
+        flex-direction: column; 
+    }
+
+    .details-row {
+        flex-direction: column; 
+    }
+
+    .details-separator {
+        display: none;
+    }
+
+    .details-left,
+    .details-right {
+        width: 100%;
+    }
+
+    .details-left p,
+    .details-right p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 5px 0;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+        flex: 1;
+    }
+
+    .input-row > .input-group:nth-child(odd) {
+        margin-right: 10px;
+    }
+
+    .input-row > .input-group:nth-child(1) {
+        order: 1; 
+    }
+
+    .input-row > .input-group:nth-child(2) {
+        order: 3; 
+    }
+
+    .input-row > .input-group:nth-child(3) {
+        order: 4; 
+    }
+
+    .input-row > .input-group:nth-child(4) {
+        order: 2; 
+    }
+}
+
+@media (max-width: 600px) {
+    .input-row {
+        flex-direction: column; 
+    }
+
+    .details-row {
+        flex-direction: column; 
+    }
+
+    .details-separator {
+        display: none;
+    }
+
+    .details-left,
+    .details-right {
+        width: 100%;
+    }
+
+    .details-left p,
+    .details-right p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 5px 0;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+        flex: 1;
+    }
+
+    .input-row > .input-group:nth-child(odd) {
+        margin-right: 10px;
+    }
+
+    .input-row > .input-group:nth-child(1) {
+        order: 1; 
+    }
+
+    .input-row > .input-group:nth-child(2) {
+        order: 3; 
+    }
+
+    .input-row > .input-group:nth-child(3) {
+        order: 4; 
+    }
+
+    .input-row > .input-group:nth-child(4) {
+        order: 2; 
+    }
+
+  
+    .details-left,
+    .details-right {
+        margin-top: 15px; 
+    }
+}
