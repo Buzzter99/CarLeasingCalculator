@@ -36,13 +36,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         //calculate leasing details(summary content)
-        const downPaymentAmount = carValue * (downPaymentPercentage / 100);
-        const monthlyInterestRate = interestRate / 100 / 12;
-        const totalLeasingCost = carValue + (carValue * monthlyInterestRate * leasePeriod);
-        const monthlyInstallment = (totalLeasingCost - downPaymentAmount) / leasePeriod;
+        const downPaymentValue = carValue * (downPaymentPercentage / 100);
+        const monthlyInterestRateValue = interestRate / 100 / 12;
+        const currentCarValue = carValue - downPaymentValue;
+        const annuityFactor = (1 - Math.pow(1 + monthlyInterestRateValue, -leasePeriod)) / monthlyInterestRateValue;
+        const monthlyInstallment = currentCarValue / annuityFactor;
+        const totalLeasingCost =  downPaymentValue + monthlyInstallment * leasePeriod;
         //assign values to the dom
         document.querySelector('p#total-leasing-cost').textContent = `Total Leasing Cost: €${totalLeasingCost.toFixed(2)}`;
-        document.querySelector('p#down-payment-result').textContent = `Down Payment: €${downPaymentAmount.toFixed(2)}`;
+        document.querySelector('p#down-payment-result').textContent = `Down Payment: €${downPaymentValue.toFixed(2)}`;
         document.querySelector('p#monthly-installment').textContent = `Monthly Installment: €${monthlyInstallment.toFixed(2)}`;
         document.querySelector('p#interest-rate').textContent = `Interest Rate: ${interestRate}%`;
     }
